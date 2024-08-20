@@ -14,4 +14,19 @@ function add(num1, num2){
 }
 
 const result = add(2, 4)
-console.log("Result: ", result)
+// console.log("Result: ", result)
+
+
+//Arrow function
+const user = {
+    username: "Arnab",
+    price: 999,
+
+    welcomeMessage: function(){
+        console.log(`${this.username}, welcome! to our website`);
+    }
+}
+
+user.welcomeMessage()
+user.username = "Shyam"
+user.welcomeMessage()
