@@ -1,3 +1,4 @@
+/*
 function sayMyName(){
     console.log("A")
     console.log("R")
@@ -27,6 +28,21 @@ const user = {
     }
 }
 
-user.welcomeMessage()
+// user.welcomeMessage()
 // user.username = "Shyam"
 // user.welcomeMessage()
+
+*/
+
+
+// Immediately Invoked Function Expressions (IIFE)
+
+(function chai(){
+    // named IIFE
+    console.log(`DB connected`);
+})();
+
+((name) => {
+    //unnamed IIFE with "arrow function"
+    console.log(`DB connected again to ${name}`);
+})("ArnabDB")
