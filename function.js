@@ -1,5 +1,4 @@
-/*
-function sayMyName(){
+function sayMyName() {
     console.log("A")
     console.log("R")
     console.log("N")
@@ -9,7 +8,7 @@ function sayMyName(){
 
 // sayMyName()
 
-function add(num1, num2){
+function add(num1, num2) {
     let res = num1 + num2
     return res
 }
@@ -23,8 +22,10 @@ const user = {
     username: "Arnab",
     price: 999,
 
-    welcomeMessage: function(){
+    welcomeMessage: function () {
         console.log(`${this.username}, welcome! to our website`);
+        console.log(this);
+
     }
 }
 
@@ -32,9 +33,34 @@ const user = {
 // user.username = "Shyam"
 // user.welcomeMessage()
 
-*/
+// console.log(this);
+
+// function chai(){
+//     let username = "ArNAAb"
+//     console.log(this.username);
+// }
+// chai()
 
 
+// const chai = function() {
+//     let username = "ArNAAb"
+//     console.log(this.username);
+// }
+// chai()
+
+
+const addTwo = (num1, num2) => (num1 + num2)
+console.log(addTwo(3, 6));
+
+
+
+
+
+
+
+
+
+/*
 // Immediately Invoked Function Expressions (IIFE)
 
 (function chai(){
@@ -46,3 +72,4 @@ const user = {
     //unnamed IIFE with "arrow function"
     console.log(`DB connected again to ${name}`);
 })("ArnabDB")
+*/
