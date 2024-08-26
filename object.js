@@ -81,4 +81,15 @@ const course = {
 }
 
 const {instructor: tutor} = course
-console.log(tutor)
+// console.log(tutor)
+
+const myObject = {
+    js: 'javascript',
+    cpp: 'C++',
+    py: 'Python',
+    rb: 'Ruby'
+}
+
+for (const key in myObject){
+    console.log(`${key} shortcut is for ${myObject[key]}`);
+}

@@ -74,6 +74,7 @@ while(index < myHeroes.length){
 }
 */
 
+/*
 // do while loop
 
 let score = 11
@@ -82,3 +83,30 @@ do {
     console.log(`Your score is: ${score}`);
     score++
 } while(score <= 10);
+ */
+
+
+// for of
+// ["", "", ""]
+// [{}, {}, {}]
+
+const arr = [1, 2, 3, 4, 5]
+for (const num of arr){
+    // console.log(num);
+}
+
+const greetings = "Hello world!"
+for (const char of greetings){
+    // console.log(`Each char is ${char}`);
+}
+
+// Map
+const map = new Map()
+map.set('IN', "India")
+map.set('US', "United States")
+map.set('UK', "United Kingdom")
+// console.log(map);
+
+for (const [key, value] of map){
+    // console.log(key, ':-', value);
+}
