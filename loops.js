@@ -110,3 +110,43 @@ map.set('UK', "United Kingdom")
 for (const [key, value] of map){
     // console.log(key, ':-', value);
 }
+
+// Foreach
+
+const coding = ["js", "ruby", "java", "python", "cpp"]
+
+coding.forEach( (item) => {
+    // console.log(item);
+} )
+
+function printMe(item){
+    console.log(item);
+}
+// coding.forEach(printMe)
+
+coding.forEach( (item, index, arr) => {
+    // console.log(item, index, arr);
+} )
+
+const myCoding = [
+    {
+        languageName: "javascript",
+        langfile: "js"
+    },
+    {
+        languageName: "java",
+        langfile: "java"
+    },
+    {
+        languageName: "python",
+        langfile: "py"
+    },
+]
+
+myCoding.forEach( (item) => {
+    console.log(item.langfile);
+} )
+
+myCoding.forEach( (item) => {
+    console.log(item.languageName);
+} )
