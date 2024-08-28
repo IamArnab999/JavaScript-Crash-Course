@@ -38,4 +38,40 @@ const hinum = numss
 .filter( (num) => num >= 40)
 
 
-console.log(hinum);
+// console.log(hinum);
+
+const myNums = [1, 2, 3]
+/*
+const myTotal = myNums.reduce(function(acc, currval){
+    console.log(`acc: ${acc} and currval: ${currval}`);
+    return acc + currval
+}, 0)
+
+// console.log(myTotal);
+*/
+
+
+const myTotal =  myNums.reduce( (acc, curr) => acc+curr, 0)
+// console.log(myTotal);
+
+const myCorses = [
+    {
+        item: "javascript",
+        price: 3999
+    },
+    {
+        item: "web development",
+        price: 6999
+    },
+    {
+        item: "Android development",
+        price: 8999,
+    },
+    {
+        item: "Cyber security",
+        price: 2999,
+    },
+]
+
+const yourTotal = myCorses.reduce((acc, item) => acc + item.price, 0)
+console.log(yourTotal);
