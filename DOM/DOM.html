@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM learning</title>
     <style>
-        h1{
+        #heading{
             color: blue;
             background-color: yellow;
         }
@@ -20,9 +20,11 @@
 </head>
 <body>
     <div class="bg-black">
-        <h1 class="heading">Let's learn some DOM things</h1>
-        <h4>Topic 1: Starter Code</h4>
+        <h1 class="heading-class">Let's learn some DOM things</h1>
+        <h1 class="heading-class">JavaScript</h1>
+        <h4 class="heading-class">Topic 1: Starter Code</h4>
         <p>now we will jump into the DOM concepts in details</p>
+        <p>in the 2nd paragraph... we'll learn something more</p>
         <button>Click me!</button>
     </div>
     <script>
@@ -32,7 +34,17 @@
         // console.log(window);
         // window.console.log("Hello ji");
         
-        document.body.childNodes[3].innerText = "abcd";
+        // document.body.childNodes[3].innerText = "abcd";
+
+        // let heading = document.getElementById("heading"); // h1
+        // console.dir(heading);
+
+        // let headings = document.getElementsByClassName("heading-class"); // h1
+        // console.dir(headings);
+        // console.log(headings);
+
+        let paras = document.getElementsByTagName()
+        
     </script>
 </body>
 </html>
