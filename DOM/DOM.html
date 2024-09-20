@@ -19,6 +19,7 @@
     </style>
 </head>
 <body>
+    <!--
     <div class="bg-black">
         <h1 class="heading-class">Let's learn some DOM things</h1>
         <h1 class="heading-class">JavaScript</h1>
@@ -27,6 +28,19 @@
         <p>in the 2nd paragraph... we'll learn something more</p>
         <button>Click me!</button>
     </div>
+    
+    <div class="new">
+        <h1>New heading</h1>
+        <h3>Fruits:</h3>
+        <ul>
+            <li>mango</li>
+            <li>lichi</li>
+            <li>papaya</li>
+        </ul>
+    </div>
+    -->
+    <em>PRACTICE Qs</em>
+    <h2>Hello JavaScript!</h2>
     <script>
         // console.log("Hello");
         // alert("DOM! DOM!!");
@@ -38,13 +52,20 @@
 
         // let heading = document.getElementById("heading"); // h1
         // console.dir(heading);
-
         // let headings = document.getElementsByClassName("heading-class"); // h1
         // console.dir(headings);
         // console.log(headings);
 
-        let paras = document.getElementsByTagName()
+        // let paras = document.getElementsByTagName()
         
+        // let div = document.querySelector("div");
+        // console.dir(div);
+        // let heading = document.querySelector("h1");
+
+        let h2 = document.querySelector("h2");
+        console.dir(h2.innerText);
+
+        h2.innerText = h2.innerText + " kaise ho aap?";
     </script>
 </body>
 </html>
