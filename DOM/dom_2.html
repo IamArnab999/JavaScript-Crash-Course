@@ -4,9 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM part two | create a new element</title>
+    <style>
+        .para{
+            color: blue;
+        }
+        .newPara{
+            color: seagreen;
+        }
+    </style>
 </head>
 <body style="background-color: #212121; color: #fff;">
     <div id="div" name="JSDiv">
+        <p class="para">this is a simple line</p>
         this is a div
         <ul>
             List
@@ -15,7 +24,6 @@
             <li>item3</li>
         </ul>
     </div>
-    <p class="para">this is a simple line</p>
 
     <script>
         /*
@@ -46,7 +54,13 @@
         let newBtn = document.createElement("button");
         newBtn.innerText = "Click me!";
 
-        console.log(newBtn);
+        newBtn.style.color = "white";
+        newBtn.style.backgroundColor = "red";
+        div.before(newBtn);
+        // OR
+        // document.querySelector("body").prepend(newBtn)
+
+        /*console.log(newBtn);
 
         let div = document.querySelector("div");
         div.append(newBtn);
@@ -56,7 +70,7 @@
         document.querySelector("body").prepend(heading);
 
         let para = document.querySelector("p");
-        // para.remove();
+        // para.remove();*/
         
     </script>
 </body>
