@@ -16,6 +16,14 @@
             color: white;
             background-color: blue;
         }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            margin: 5px;
+            text-align: center;
+            background-color: lightgreen;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +49,10 @@
     -->
     <em>PRACTICE Qs</em>
     <h2>Hello JavaScript!</h2>
+
+    <div class="box">first div</div>
+    <div class="box">second div</div>
+    <div class="box">third div</div>
     <script>
         // console.log("Hello");
         // alert("DOM! DOM!!");
@@ -62,10 +74,20 @@
         // console.dir(div);
         // let heading = document.querySelector("h1");
 
-        let h2 = document.querySelector("h2");
+        /*let h2 = document.querySelector("h2");
         console.dir(h2.innerText);
 
-        h2.innerText = h2.innerText + " kaise ho aap?";
+        h2.innerText = h2.innerText + " kaise ho aap?";*/
+
+        let divs = document.querySelectorAll(".box");
+        console.log(divs);
+        
+        let idx = 1;
+        for(div of divs){
+            console.log(div.innerText = `new good value ${idx}`);
+            idx++;
+        }
+        // divs[2].innerText = "okay gooo";
     </script>
 </body>
 </html>
