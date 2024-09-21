@@ -44,6 +44,20 @@
         // console.log(id);
 
         let newBtn = document.createElement("button");
+        newBtn.innerText = "Click me!";
+
+        console.log(newBtn);
+
+        let div = document.querySelector("div");
+        div.append(newBtn);
+
+        let heading = document.createElement("h1");
+        heading.innerHTML = "<i>Namaste duniya!</i>";
+        document.querySelector("body").prepend(heading);
+
+        let para = document.querySelector("p");
+        // para.remove();
+        
     </script>
 </body>
 </html>
