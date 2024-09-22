@@ -11,6 +11,12 @@
         .newPara{
             background-color: seagreen;
         }
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: brown
+        }
     </style>
 </head>
 <body style="background-color: #212121; color: #fff;">
@@ -23,6 +29,9 @@
             <li>item2</li>
             <li>item3</li>
         </ul>
+        <button onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
+        <br><br>
+        <div class="box" onmouseover="console.log('you are inside our box')">a box</div>
     </div>
 
     <script>
@@ -50,15 +59,16 @@
         
         // let id = div.getAttribute("id");
         // console.log(id);
-
+        /*
         let newBtn = document.createElement("button");
         newBtn.innerText = "Click me!";
 
         newBtn.style.color = "white";
         newBtn.style.backgroundColor = "red";
         div.before(newBtn);
+        */
 
-        let para = document.querySelector("p");
+        // let para = document.querySelector("p");
         // OR
         // document.querySelector("body").prepend(newBtn)
 
