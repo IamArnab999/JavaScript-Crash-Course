@@ -20,6 +20,7 @@
     </style>
 </head>
 <body style="background-color: #212121; color: #fff;">
+    <!--
     <div id="div" name="JSDiv">
         <p class="para">this is a simple line</p>
         this is a div
@@ -29,11 +30,12 @@
             <li>item2</li>
             <li>item3</li>
         </ul>
-        <button onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
-        <br><br>
-        <div class="box" onmouseover="console.log('you are inside our box')">a box</div>
     </div>
-
+    -->
+    <button id="#btn1" onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
+    <button ondblclick="console.log('button was clicked twiceee')">click twice!!!!</button>
+    <br><br>
+    <div class="box" onmouseover="console.log('you are inside our box')">a box</div>
     <script>
         /*
         const parent = document.querySelector('.parent')
@@ -83,7 +85,14 @@
 
         let para = document.querySelector("p");
         // para.remove();*/
-        
+
+        let btn1 = document.querySelector("#btn1");
+        btn1.onclick = () => {
+            console.log("btn1 was clicked");
+            let a = 25;
+            a++;
+            console.log(a); // 26
+        }
     </script>
 </body>
 </html>
