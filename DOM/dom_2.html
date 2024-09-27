@@ -32,7 +32,7 @@
         </ul>
     </div>
     -->
-    <button id="#btn1" onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
+    <button id="btn1" onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
     <button ondblclick="console.log('button was clicked twiceee')">click twice!!!!</button>
     <br><br>
     <div class="box" onmouseover="console.log('you are inside our box')">a box</div>
@@ -92,7 +92,12 @@
             let a = 25;
             a++;
             console.log(a); // 26
-        }
+        };
+
+        let div = document.querySelector("div");
+        div.onmouseover = () => {
+            console.log("You're inside div");
+        };
     </script>
 </body>
 </html>
