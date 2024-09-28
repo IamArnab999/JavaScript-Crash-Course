@@ -32,10 +32,10 @@
         </ul>
     </div>
     -->
-    <button id="btn1" onclick="console.log('button was clicked'); alert('hello user')">Clickkkk!</button>
-    <button ondblclick="console.log('button was clicked twiceee')">click twice!!!!</button>
-    <br><br>
-    <div class="box" onmouseover="console.log('you are inside our box')">a box</div>
+    <button id="btn1">btn1</button>
+    <!-- <button ondblclick="console.log('button was clicked twiceee')">click twice!!!!</button> -->
+    <!-- <br><br> -->
+    <div>this is a box</div>
     <script>
         /*
         const parent = document.querySelector('.parent')
@@ -87,17 +87,23 @@
         // para.remove();*/
 
         let btn1 = document.querySelector("#btn1");
-        btn1.onclick = () => {
-            console.log("btn1 was clicked");
-            let a = 25;
-            a++;
-            console.log(a); // 26
-        };
+        // btn1.onclick = (evt) => {
+        //     console.log(evt);
+        //     console.log(evt, type);
+        //     console.log(evt, target);
+        //     console.log(evt.clientX, evt.clientY);
+        // };
+        btn1.addEventListener("click", () => {
+            console.log("Button 1 clicked");
+        });
 
+        btn1.addEventListener("click", () => {
+            console.log("Button 1 clicked - handler 2");
+        });
         let div = document.querySelector("div");
-        div.onmouseover = () => {
-            console.log("You're inside div");
-        };
+        // div.onmouseover = () => {
+        //     console.log("You're inside div");
+        // };
     </script>
 </body>
 </html>
