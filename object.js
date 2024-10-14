@@ -94,7 +94,17 @@ for (const key in myObject){
     // console.log(`${key} shortcut is for ${myObject[key]}`);
 }
 
+/*
 const programming = ["js", "py", "rb", "py", "java", "cpp"]
 for (const key in programming){
     console.log(key);
 }
+*/
+
+const student = {
+    fullname: "Arnab Kanti Das",
+    marks: 91.6,
+    printMarks: function(){
+        console.log("marks = ", marks);
+    },
+};
