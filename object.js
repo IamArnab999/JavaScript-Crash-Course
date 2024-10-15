@@ -101,10 +101,45 @@ for (const key in programming){
 }
 */
 
+// ## The main differance between classes & objects - Classes are a single templates based on which we can create many different functions, but object can hold perperties.
+
 const student = {
     fullname: "Arnab Kanti Das",
     marks: 91.6,
     printMarks: function(){
-        console.log("marks = ", marks);
+        console.log("marks = ", this.marks);
     },
 };
+
+const employee = {
+    calctax(){
+        console.log("tax rate is 20%");
+    },
+    // OR (another way to define function)
+    calctax2: function(){
+        console.log("tax rate is 30%");
+    }
+};
+
+// now we're going to create a new object
+const karanArjun = {
+    salary: 20000,
+};
+
+// set prototype (by setting protype of a class to another object, that new object can get access to the features of the previous class - the syntax is like this)
+karanArjun.__proto__ = employee;
+
+// Let's create a class 
+
+class ToyotaCar {
+    start(){
+        console.log("start");
+    }
+    stop(){
+        console.log("stop");
+    }
+}
+
+// syntax to create objects
+let fortuner = new ToyotaCar();
+let lexus = new ToyotaCar();
