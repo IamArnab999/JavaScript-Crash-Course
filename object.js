@@ -132,6 +132,11 @@ karanArjun.__proto__ = employee;
 // Let's create a class 
 
 class ToyotaCar {
+    constructor(brand, milage){
+        console.log("Creating new object!");
+        this.brand = brand;
+        this.milage = milage;
+    }
     start(){
         console.log("start");
     }
@@ -141,5 +146,9 @@ class ToyotaCar {
 }
 
 // syntax to create objects
-let fortuner = new ToyotaCar();
-let lexus = new ToyotaCar();
+let fortuner = new ToyotaCar("fortuner", 12); //constructor
+console.log(fortuner);
+// fortuner.setBrand("fortuner");
+let lexus = new ToyotaCar("lexus", 20); //constructor
+console.log(lexus);
+// lexus.setBrand("lexus");
