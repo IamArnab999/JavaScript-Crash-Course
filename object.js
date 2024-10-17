@@ -1,7 +1,7 @@
 //singleton - if we create object from constructors, it'll be always singleton
 //Object.create
 
-
+/*
 const mySym = Symbol("key1")
 //object literals
 const obj = {
@@ -13,7 +13,7 @@ const obj = {
     hobbies: ["reading", "playing guiter", "coding"],
     isMarried: false
 };
-
+*/
 /*
 //there're two ways to access the array
 console.log(obj.location)
@@ -23,7 +23,7 @@ console.log(obj[mySym])
 */
 
 //console.log(obj)
-obj.age = 21
+// obj.age = 21
 //Object.freeze(obj)
 //obj.age = 38 // this can't make any changes to the object
 
@@ -37,7 +37,7 @@ obj.greeting2 = function(){
 console.log(obj.greeting())
 console.log(obj.greeting2())
 */
-
+/*
 const tinderUser = {}
 
 tinderUser.id = "arnab21"
@@ -93,14 +93,14 @@ const myObject = {
 for (const key in myObject){
     // console.log(`${key} shortcut is for ${myObject[key]}`);
 }
-
+*/
 /*
 const programming = ["js", "py", "rb", "py", "java", "cpp"]
 for (const key in programming){
     console.log(key);
 }
 */
-
+/*
 // ## The main differance between classes & objects - Classes are a single templates based on which we can create many different functions, but object can hold perperties.
 
 const student = {
@@ -152,3 +152,83 @@ console.log(fortuner);
 let lexus = new ToyotaCar("lexus", 20); //constructor
 console.log(lexus);
 // lexus.setBrand("lexus");
+*/
+
+
+// Inheritance
+/* EX - 1
+class Parent{
+    greet(){
+        console.log("Hello everyone!");
+    }
+}
+class Child extends Parent{}
+let obj = new Child();
+
+
+class Person {
+    constructor(){
+        console.log("Enter parent constructor");
+        this.species = "homo sapience";
+    }
+    eat() {
+        console.log("can eat...");
+    }
+    sleep() {
+        console.log("can sleep...");
+    }
+    work() {
+        console.log("dont't do anything! ");
+    }
+}
+
+class Engineer extends Person {
+    constructor(branch){
+        console.log("Enter child constructor");
+        super(); // to invoke parent class constructor
+        this.branch = branch;
+        console.log("Exit child constructor");
+    }
+    work() {
+        super.eat();
+        console.log("solve problems, build something...");
+    }
+}
+class Doctor extends Person {
+    work() {
+        console.log("treat patients...");
+    }
+}
+// let arnab = new Doctor();
+let engobj = new Engineer("chemical eng");
+
+
+let DATA = "secret information";
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    viewData() {
+        console.log("Data = ", DATA);
+    }
+}
+class Admin extends User {
+    constructor(name, email) {
+        super(name, email);
+    }
+    editData() {
+        DATA = "some new value";
+    }
+}
+let student1 = new User("arnab", "arnab29@gmail.com")
+let student2 = new User("rik", "soso29@gmail.com")
+
+let teacher1 = new User("sirji", "sirrrr@gmail.com")
+
+let admin1 = new Admin();
+*/
+
+
+// ERROR HANDLING
+
