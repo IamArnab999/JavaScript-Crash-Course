@@ -229,6 +229,69 @@ let teacher1 = new User("sirji", "sirrrr@gmail.com")
 let admin1 = new Admin();
 */
 
+/*
+function hello(){
+    console.log("Hello");
+}
+setTimeout(hello, 4000)
 
-// ERROR HANDLING
+// OR
 
+setTimeout(() => {
+    console.log("Hello...");
+}, 4000);
+*/
+
+// Callback
+
+/*
+function sum(a, b){
+    console.log(a+b);
+}
+
+function calculator(a, b, sumCallback){
+    sumCallback(a, b);
+}
+
+calculator(3, 6, sum)
+
+// nesting
+
+for(let i = 0; i<5; i++){
+    let str ="";
+    for(let j = 0; j<5; j++){
+        str = str + j;
+    }
+    console.log(i, str);
+}
+
+
+function getData(dataId, getNextdata){
+    setTimeout(() => {
+        console.log("data", dataId); 
+        getNextdata();
+    },3000);  
+}
+
+getData(1, () => {
+    console.log("Getting data 2...");
+    getData(2, () => {
+        console.log("Getting data 3...");
+        getData(3, () => {
+            console.log("Getting data 4...");
+            getData(4, () => {
+                console.log("Getting data 5...");
+                getData(5, () => {
+                    console.log("Getting data 6...");
+                    getData(6);
+                })
+            })
+        })
+    });
+});
+*/
+
+let promise = new Promise((resolve, reject) => {
+    console.log("I am a promise...");
+    reject("some unknown error occured!");
+});
