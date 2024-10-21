@@ -273,6 +273,9 @@ function getData(dataId, getNextdata){
     },3000);  
 }
 
+
+// callback hell
+
 getData(1, () => {
     console.log("Getting data 2...");
     getData(2, () => {
@@ -316,6 +319,7 @@ asyncFunc1().then((res) => {
 });
 */
 
+/*
 const getPromise = () => {
     return new Promise((resolve, reject) => {
         console.log("Im-a promise");
@@ -332,7 +336,24 @@ promise.then(() => {
 promise.catch(() => {
     console.log("rejected due to some error!");
 });
+*/
 
+// Async Function (sample)
+/*
+function api(){
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("Weather data");
+            resolve(200);
+        }, 2000);
+    });
+}
+async function getWeatherData(){
+    await api();
+}
+*/
+
+// Async Function
 function getData(dataId, getNextdata) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -342,6 +363,17 @@ function getData(dataId, getNextdata) {
             if (getNextdata) {
                 getNextdata();
             }
-        }, 5000);
+        }, 3000);
     });
 }
+
+// Promise chain 
+/*
+getData(1)
+    .then((res) => {
+        return getData(2);
+    })
+    .then((res) => {
+        console.log(res);
+    });
+*/
