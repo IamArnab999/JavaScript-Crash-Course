@@ -61,11 +61,23 @@ val1 = null ?? 1 ?? 30
 
 console.log(val1);
 */
-
-
 // ternary operator
 // condition ? true : false
 /*
 const  coldCoffeePrice = 280
 coldCoffeePrice <= 80 ? console.log("Cold coffee is less than 80") : console.log("Cold coffee is more than 80");
 */
+
+
+// Fetch API
+
+const URL = "https://cat-fact.herokuapp.com/facts";
+const factPara = document.querySelector("#fact");
+
+const getFacts = async () => {
+    console.log("getting data....");
+    let response = await fetch(URL);
+    console.log(response); // JSON format
+    let data = await response.json();
+    factPara.innerText = data[0].text;
+};
