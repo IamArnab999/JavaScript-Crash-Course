@@ -73,7 +73,8 @@ coldCoffeePrice <= 80 ? console.log("Cold coffee is less than 80") : console.log
 
 const URL = "https://cat-fact.herokuapp.com/facts";
 const factPara = document.querySelector("#fact");
-
+const btn = document.querySelector("#btn");
+/*
 const getFacts = async () => {
     console.log("getting data....");
     let response = await fetch(URL);
@@ -81,3 +82,17 @@ const getFacts = async () => {
     let data = await response.json();
     factPara.innerText = data[0].text;
 };
+
+*/
+
+function getFacts() {
+    fetch(URL)
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            factPara.innerText = data[2].text;
+        });
+}
+
+btn.addEventListener("click", getFacts);
